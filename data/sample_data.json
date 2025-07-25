@@ -1,0 +1,61 @@
+
+{
+  "sample_patients": [
+    {
+      "patient_id": "DEMO_001",
+      "age": 45,
+      "gender": "M",
+      "symptoms": ["cough", "fever", "shortness of breath"],
+      "image_filename": "chest_xray_001.jpg",
+      "ground_truth": "Pneumonia",
+      "severity": "moderate"
+    },
+    {
+      "patient_id": "DEMO_002",
+      "age": 32,
+      "gender": "F",
+      "symptoms": ["dry cough", "fatigue"],
+      "image_filename": "chest_xray_002.jpg",
+      "ground_truth": "COVID-19",
+      "severity": "mild"
+    },
+    {
+      "patient_id": "DEMO_003",
+      "age": 28,
+      "gender": "M",
+      "symptoms": [],
+      "image_filename": "chest_xray_003.jpg",
+      "ground_truth": "Normal",
+      "severity": "none"
+    }
+  ],
+  "model_performance": {
+    "accuracy": 0.942,
+    "precision": {
+      "Normal": 0.951,
+      "Pneumonia": 0.938,
+      "COVID-19": 0.927
+    },
+    "recall": {
+      "Normal": 0.945,
+      "Pneumonia": 0.951,
+      "COVID-19": 0.933
+    },
+    "f1_score": {
+      "Normal": 0.948,
+      "Pneumonia": 0.944,
+      "COVID-19": 0.930
+    }
+  },
+  "dataset_info": {
+    "total_images": 15000,
+    "training_images": 12000,
+    "validation_images": 1500,
+    "test_images": 1500,
+    "class_distribution": {
+      "Normal": 5000,
+      "Pneumonia": 6000,
+      "COVID-19": 4000
+    }
+  }
+}
